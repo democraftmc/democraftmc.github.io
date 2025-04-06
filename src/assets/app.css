@@ -2,5 +2,7 @@
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  themes: autumn --default, coffee;
+  themes:
+    autumn --default,
+    coffee;
 }
