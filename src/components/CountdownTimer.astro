@@ -1,0 +1,79 @@
+---
+interface Props {
+  targetDate: string;
+}
+
+const { targetDate } = Astro.props;
+---
+
+<div class="countdown-container glass p-6 rounded-xl text-center">
+  <h2 class="text-2xl font-bold text-primary-content mb-4">Server Launch In</h2>
+  <div class="grid grid-cols-4 gap-4">
+    <div class="countdown-item">
+      <div class="stats bg-primary/20 backdrop-blur-md border border-primary/30">
+        <div class="stat">
+          <div class="stat-value text-4xl md:text-5xl font-bold text-primary-content" id="days">00</div>
+          <div class="stat-title text-primary">Days</div>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-item">
+      <div class="stats bg-primary/20 backdrop-blur-md border border-primary/30">
+        <div class="stat">
+          <div class="stat-value text-4xl md:text-5xl font-bold text-primary-content" id="hours">00</div>
+          <div class="stat-title text-primary">Hours</div>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-item">
+      <div class="stats bg-primary/20 backdrop-blur-md border border-primary/30">
+        <div class="stat">
+          <div class="stat-value text-4xl md:text-5xl font-bold text-primary-content" id="minutes">00</div>
+          <div class="stat-title text-primary">Minutes</div>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-item">
+      <div class="stats bg-primary/20 backdrop-blur-md border border-primary/30">
+        <div class="stat">
+          <div class="stat-value text-4xl md:text-5xl font-bold text-primary-content" id="seconds">00</div>
+          <div class="stat-title text-primary">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ targetDate }}>
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const target = new Date(targetDate).getTime();
+    const difference = target - now;
+    
+    // If the countdown is over
+    if (difference < 0) {
+      document.getElementById('days').innerText = '00';
+      document.getElementById('hours').innerText = '00';
+      document.getElementById('minutes').innerText = '00';
+      document.getElementById('seconds').innerText = '00';
+      return;
+    }
+    
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').innerText = days.toString().padStart(2, '0');
+    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+  }
+  
+  // Update the countdown every second
+  setInterval(updateCountdown, 1000);
+  
+  // Initial update
+  updateCountdown();
+</script>
+
