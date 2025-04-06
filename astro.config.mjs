@@ -8,6 +8,8 @@ dotenv.config();
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://democraft.studio',
+  output: 'server',
   vite: {
     plugins: [tailwindcss()],
   },
