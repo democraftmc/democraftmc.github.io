@@ -25,7 +25,7 @@ Leur coût est estimé autour de **50 €**, mais cela peut varier selon la char
 ## Revenus
 
 **Aucun revenu ce mois-ci.**  
-Depuis l’annonce de la fermeture de DEMOCRAFT, la boutique est désactivée, et **la vente de grades — notre principale source de financement — a été suspendue**.
+Depuis l’annonce de la fermeture de DEMOCRAFT, **la vente de grades — notre principale source de financement — a été suspendue**. Plus d'informations le mois prochain 🫡
 
 ## Dépenses
 
