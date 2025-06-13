@@ -12,6 +12,18 @@ import { Icon } from "astro-icon/components";
     <label for="nav-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul
       class="menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto">
+      <li><a href="/"><Icon name="lucide:home" /> Accueil</a></li>
+      <li>
+        <details>
+          <summary><Icon name="lucide:box" /> Projets</summary>
+          <ul class="p-2">
+            <li><a>DEMOCRAFT</a></li>
+            <li><a>Vaatigames</a></li>
+            <li><a>Mondes (aka Realms)</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/compta"><Icon name="lucide:badge-dollar-sign" /> Compta.</a></li>
     </ul>
   </div>
 </div>
