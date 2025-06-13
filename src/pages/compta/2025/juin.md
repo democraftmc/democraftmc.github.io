@@ -1,6 +1,7 @@
 ---
 title: Comptabilité Juin 2025
 description: Première compta de l'année ! Mais est-elle bonne ?
+banner: /screens/juin-showroom.png
 layout: ../../../layouts/compta.astro
 ---
 
