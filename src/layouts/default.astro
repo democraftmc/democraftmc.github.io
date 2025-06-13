@@ -1,0 +1,22 @@
+---
+import "../assets/app.css";
+import Head from './head.astro';
+const { title = "DEMOCRAFT STUDIOS", description } = Astro.props;
+
+import Navbar from "../components/Navbar.astro"
+import Navigation from "../components/Navigation.astro"
+---
+
+<html
+  lang="fr"
+  data-theme="demolight">
+  <Head title={title} description={description} />
+    <body class="bg-base-100">
+      	<Navbar />
+        <Navigation>
+          <main class="pt-20 mx-2 md:mx-20">
+            <slot />
+          </main>
+        </Navigation>   
+  </body>
+</html>

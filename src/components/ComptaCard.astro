@@ -1,0 +1,16 @@
+---
+const { month = "Mois", year = "2025", link="#" } = Astro.props;
+---
+
+<div class="bg-[url('/banner.jpg')] rounded-2xl card card-compact">
+    <div class="card-body glass rounded-2xl">
+        <h2 class="card-title">
+            {month}
+            <span class="badge badge-primary">{year}</span>
+        </h2>
+        <p><slot /></p>
+        <div class="justify-end card-actions">
+            <a class="btn btn-primary" href={ link }>Voir</a>
+        </div>
+    </div>
+</div>

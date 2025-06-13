@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/default.astro"
+import { Icon } from "astro-icon/components";
+import ComptaCard from "../../components/ComptaCard.astro";
+import TitleCard from "../../components/TitleCard.astro";
+---
+
+<Layout>
+	<TitleCard title="Comptabilité de DEMOCRAFT" description="Parce que DEMOCRAFT reste transparent, même quand ça pique, nous avons rendu notre compta publique. Après c'est pas Picsou non plus..." />
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-8">
+        <ComptaCard month="Juin" year="2025" link="/compta/2025/juin">
+        </ComptaCard>
+    </div>
+</Layout>

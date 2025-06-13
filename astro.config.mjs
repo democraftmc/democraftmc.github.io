@@ -1,17 +1,35 @@
-import { defineConfig } from "astro/config";
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+// Styling
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
-import mdx from "@astrojs/mdx";
-import dotenv from "dotenv";
 
-dotenv.config();
+// Markdown
+import remarkObsidian from 'remark-obsidian';
+import mdx from '@astrojs/mdx';
+
+// Site Managment
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://democraft.studio',
-  output: 'server',
+  site: 'https://wiki.democraft.fr',
+  build: {
+    format: "file",
+  },
+  integrations: [icon(), mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [icon(), mdx()],
+  markdown: {
+      syntaxHighlight: {
+        type: 'shiki',
+        excludeLangs: ['mermaid', 'math'],
+      },
+    remarkPlugins: [remarkObsidian],
+  },
+  experimental: {
+    headingIdCompat: true,
+  }
 });
