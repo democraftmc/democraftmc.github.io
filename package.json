@@ -1,29 +1,25 @@
 {
-  "name": "democraft-wiki",
+  "name": "starter-kit-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "dev:expose": "astro dev --host",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/sitemap": "^3.4.1",
-    "@iconify-json/lucide": "^1.2.44",
+    "@astrojs/mdx": "^4.3.13",
+    "@iconify-json/lucide": "^1.2.86",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.9.3",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.11",
     "astro-icon": "^1.1.5",
-    "astro-pagefind": "^1.8.3",
-    "remark-obsidian": "^1.8.0",
-    "tailwindcss": "^4.1.10",
-    "theme-change": "^2.5.0",
-    "unist-util-visit": "^5.0.0"
+    "tailwindcss": "^4.1.18",
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
-    "daisyui": "^5.0.43"
+    "daisyui": "latest"
   }
 }

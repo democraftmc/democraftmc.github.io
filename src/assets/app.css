@@ -44,7 +44,7 @@
 @plugin "daisyui/theme" {
   name: "dark";
   default: false;
-  prefersdark: false;
+  prefersdark: true;
   color-scheme: "dark";
   --color-base-100: oklch(22% 0.041 260.031);
   --color-base-200: oklch(20% 0.042 265.755);
@@ -236,10 +236,8 @@
 }
 
 
-.menu-title {
+h1, h2, h3, h4, h5, h6, .minecraft-font {
   font-family: 'Minecraft Five', sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
 }
 
 /* 

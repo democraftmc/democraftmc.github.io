@@ -1,13 +1,17 @@
 ---
-import Layout from "../layouts/default.astro"
-import TitleCard from "../components/TitleCard.astro";
+// Ici, on peux ajouter du code, des fichiers ou des variables que l'on pouras ensuite utiliser dans l'HTML
+
+// On importe le composant Icon de astro-icon pour pouvoir l'utiliser dans notre HTML
 import { Icon } from "astro-icon/components";
+import Layout from '../layouts/default.astro';
 ---
 
-<Layout>
-	<TitleCard url="/briques.png">
-		<img class="w-full h-auto md:h-30 md:w-auto" src="/studio.png" />
-		<p></p>
-	</TitleCard>
-	
+<Layout title="DEMOCRAFT STUDIOS" description="Bienvenue sur le site officiel de Democraft Studios, votre destination ultime pour des serveurs Minecraft innovants et passionnants. Découvrez nos projets, rejoignez notre communauté et plongez dans l'univers captivant de Democraft Studios.">
+<div class="h-full w-full flex flex-col items-center justify-center">
+  <h1 class="text-6xl md:text-9xl font-bold mb-6">Soon</h1> 
+  <div class="divider mt-8 md:mt-20">
+  <img src="/title-color-demo.png" class="w-auto h-12 md:h-20" />
+  </div>
+  <p class="text-lg">Certified</p>
+  </div>
 </Layout>
